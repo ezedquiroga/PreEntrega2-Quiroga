@@ -1,0 +1,112 @@
+@import url('https://fonts.googleapis.com/css2?family=Bungee&family=Dancing+Script&family=Press+Start+2P&family=Rubik+Dirt&family=Satisfy&family=Shadows+Into+Light&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@600&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  font-family: sans-serif;
+}
+
+/* HEADER */
+
+.header{
+    background-color: darkgrey;
+    display: grid;
+    grid-template-columns: .5fr 2fr .2fr .1fr;
+    grid-template-rows: .5fr .5fr;
+    grid-template-areas: 
+    "logo nombre redes"
+    "logo pages pages"
+    ;
+}
+.logo{
+    grid-area: logo;
+    display: flex;
+    justify-content: center;
+}
+.nombre{
+    grid-area: nombre;
+    display: flex;
+    justify-content: flex-start;
+    align-items: flex-end;
+    font-size: 30px;
+    font-family: 'Rubik Dirt', cursive;
+    text-transform: uppercase;
+}
+.redes{
+    grid-area: redes;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: flex-end;
+}
+.pages{
+    grid-area: pages;
+    display: flex;
+    align-items: flex-end;
+    justify-content: space-evenly;
+}
+.pages a{
+    font-family: 'Lexend Peta', sans-serif;
+    font-size: large;
+    text-decoration: none;
+    color: snow;
+}
+.header a img{
+    width: 125px;
+}
+.header ul img{
+    width: 25px;
+    padding: 4px;
+}
+
+/* MAIN */
+
+.tag{
+    text-transform: uppercase;
+    font-size: larger;
+}
+.masvendidos{
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: space-between;
+}
+/* .ul{
+    display: flex;
+    flex-direction: row;
+    align-content: space-around;
+} */
+.main img{
+    width: 280px;
+    padding: 10px;
+}
+.main p{
+    background-color: lightskyblue;
+}
+.comentario{
+    display: flex;
+    justify-content: space-around;
+}
+.comentario div{
+    border-style: solid;
+    border-color: lightskyblue;
+    padding: 35px;
+}
+
+/* FOOTER */
+
+.footer{
+    background-color: gray;
+    display: flex;
+    justify-content: space-around;
+}
+.footer ul{
+    list-style-type: none;
+}
+.footer img{
+    width: 25px;
+}
+.fuente{
+    font-size: large;
+    font-weight: bold;
+}
