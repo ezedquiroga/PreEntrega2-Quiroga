@@ -1,29 +1,32 @@
 @import url('https://fonts.googleapis.com/css2?family=Bungee&family=Dancing+Script&family=Press+Start+2P&family=Rubik+Dirt&family=Satisfy&family=Shadows+Into+Light&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Lexend+Peta:wght@600&display=swap');
-*{
-  margin: 0;
-  padding: 0;
-  font-family: sans-serif;
+@import url('https://fonts.googleapis.com/css2?family=Stick+No+Bills:wght@200;300;600&display=swap');
+
+* {
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
 }
 
 /* HEADER */
 
-.header{
+.header {
     background-color: darkgrey;
     display: grid;
     grid-template-columns: .5fr 2fr .2fr .1fr;
     grid-template-rows: .5fr .5fr;
-    grid-template-areas: 
-    "logo nombre redes"
-    "logo pages pages"
+    grid-template-areas:
+        "logo nombre redes"
+        "logo pages pages"
     ;
 }
-.logo{
+
+.logo {
     grid-area: logo;
     display: flex;
     justify-content: center;
 }
-.nombre{
+
+.nombre {
     grid-area: nombre;
     display: flex;
     justify-content: flex-start;
@@ -32,146 +35,173 @@
     font-family: 'Rubik Dirt', cursive;
     text-transform: uppercase;
 }
-.redes{
+
+.redes {
     grid-area: redes;
     display: flex;
     justify-content: space-evenly;
     align-items: flex-end;
 }
-.pages{
+
+.pages {
     grid-area: pages;
     display: flex;
     align-items: flex-end;
     justify-content: space-evenly;
 }
-.pages a{
-    font-family: 'Lexend Peta', sans-serif;
-    font-size: large;
+
+.pages a {
+    font-family: 'Stick No Bills', sans-serif;
+    font-weight: 600;
+    font-size: larger;
     text-decoration: none;
     color: snow;
+    padding-bottom: 3px;
 }
-.header a img{
+
+.header a img {
     width: 125px;
 }
-.header ul img{
+
+.header ul img {
     width: 25px;
     padding: 4px;
 }
-@media (max-width: 1024px){
-    .pages a{
-        font-size: small;    
+
+@media (max-width: 740px) {
+    .header {
+        display: grid;
+        grid-template-columns: .5fr 1fr 1fr;
+        grid-template-rows: .5fr .5fr 2fr;
+        grid-template-areas:
+            "logo nombre redes"
+            "logo nombre redes"
+            "pages pages pages"
     }
-}
-@media (max-width: 768px){
-    .pages a{
-        font-family: 'Courier New', Courier, monospace;
-    }
-}
-@media (max-width: 425px){
-    .header{
-    display: grid;
-    grid-template-columns: .5fr 1fr 1fr;
-    grid-template-rows: .5fr .5fr 2fr;
-    grid-template-areas: 
-    "logo nombre redes"
-    "logo nombre redes"
-    "pages pages pages"
-    }
-    .logo{
+
+    .logo {
         grid-area: logo;
     }
-    .nombre{
+
+    .nombre {
         grid-area: nombre;
-        font-size: medium;
     }
-    .redes{
+
+    .redes {
         grid-area: redes;
         justify-content: flex-start;
     }
-    .pages{
+
+    .pages {
         grid-area: pages;
         flex-direction: column;
         align-items: flex-start;
     }
-    .header a img{
+}
+
+@media (max-width: 425px) {
+    .nombre{
+        font-size: medium;
+    }
+    .header a img {
         width: 60px;
     }
-    .header ul img{
+
+    .header ul img {
         width: 15px;
     }
+
+    .pages a {
+        font-family: 'Stick No Bills', sans-serif;
+        font-size: medium;
+    }
 }
+
 /* MAIN */
 
-.tag{
+.tag {
     text-transform: uppercase;
     font-size: larger;
 }
-.masvendidos{
+
+.masvendidos {
     display: flex;
     flex-direction: row;
     flex-wrap: wrap;
     align-items: center;
     justify-content: space-between;
 }
+
 /* .ul{
     display: flex;
     flex-direction: row;
     align-content: space-around;
 } */
-.main img{
+.main img {
     width: 280px;
     padding: 10px;
 }
-.main p{
+
+.main p {
     background-color: lightskyblue;
 }
-.comentario{
+
+.comentario {
     display: flex;
     justify-content: space-around;
 }
-.comentario div{
+
+.comentario div {
     border-style: solid;
     border-color: lightskyblue;
     padding: 35px;
 }
+
 /* MAIN - PRODUCTOS */
 
-.main-productos{
+.main-productos {
     display: grid;
     grid-template-columns: 1fr 4fr;
     grid-template-rows: 1fr 3fr;
-    grid-template-areas: 
-    "tag carousel"
-    "navflex carousel"
+    grid-template-areas:
+        "tag carousel"
+        "navflex carousel"
     ;
 }
-.tag{
+
+.tag {
     grid-area: tag;
 }
-.navflex{
+
+.navflex {
     grid-area: navflex;
 }
-.carousel{
+
+.carousel {
     grid-area: carousel;
 }
-.carousel{
+
+.carousel {
     width: 250px;
 }
 
 /* FOOTER */
 
-.footer{
+.footer {
     background-color: gray;
     display: flex;
     justify-content: space-around;
 }
-.footer ul{
+
+.footer ul {
     list-style-type: none;
 }
-.footer img{
+
+.footer img {
     width: 25px;
 }
-.fuente{
+
+.fuente {
     font-size: large;
     font-weight: bold;
 }
