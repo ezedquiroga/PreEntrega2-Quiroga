@@ -57,7 +57,49 @@
     width: 25px;
     padding: 4px;
 }
-
+@media (max-width: 1024px){
+    .pages a{
+        font-size: small;    
+    }
+}
+@media (max-width: 768px){
+    .pages a{
+        font-family: 'Courier New', Courier, monospace;
+    }
+}
+@media (max-width: 425px){
+    .header{
+    display: grid;
+    grid-template-columns: .5fr 1fr 1fr;
+    grid-template-rows: .5fr .5fr 2fr;
+    grid-template-areas: 
+    "logo nombre redes"
+    "logo nombre redes"
+    "pages pages pages"
+    }
+    .logo{
+        grid-area: logo;
+    }
+    .nombre{
+        grid-area: nombre;
+        font-size: medium;
+    }
+    .redes{
+        grid-area: redes;
+        justify-content: flex-start;
+    }
+    .pages{
+        grid-area: pages;
+        flex-direction: column;
+        align-items: flex-start;
+    }
+    .header a img{
+        width: 60px;
+    }
+    .header ul img{
+        width: 15px;
+    }
+}
 /* MAIN */
 
 .tag{
@@ -91,6 +133,29 @@
     border-style: solid;
     border-color: lightskyblue;
     padding: 35px;
+}
+/* MAIN - PRODUCTOS */
+
+.main-productos{
+    display: grid;
+    grid-template-columns: 1fr 4fr;
+    grid-template-rows: 1fr 3fr;
+    grid-template-areas: 
+    "tag carousel"
+    "navflex carousel"
+    ;
+}
+.tag{
+    grid-area: tag;
+}
+.navflex{
+    grid-area: navflex;
+}
+.carousel{
+    grid-area: carousel;
+}
+.carousel{
+    width: 250px;
 }
 
 /* FOOTER */
